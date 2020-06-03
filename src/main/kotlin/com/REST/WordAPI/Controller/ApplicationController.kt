@@ -13,7 +13,6 @@ class ApplicationController {
     @Resource
     var wordService: WordService? = null
 
-    var word = Word(1,"oeps")
 
     @GetMapping(value = ["/words"])
     fun getWords(): List<Word?>? {
@@ -23,7 +22,7 @@ class ApplicationController {
     }
 
     @PostMapping(value = ["/createWord"])
-    fun createEmployee(@RequestBody w: Word?) {
+    fun createEmployee(@RequestBody w: Word) {
         wordService?.insertWord(w)
     }
 }

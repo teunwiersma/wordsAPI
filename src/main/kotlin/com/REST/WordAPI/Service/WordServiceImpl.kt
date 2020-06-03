@@ -15,7 +15,7 @@ class WordServiceImpl : WordService {
         return wordDao?.findAll()
     }
 
-    override fun insertWord(emp: Word?) {
-        wordDao?.insertWord(emp)
+    override fun insertWord(w: Word) {
+        wordDao?.insertWord(w)
     }
 }
