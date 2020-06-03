@@ -8,5 +8,5 @@ interface WordService {
 
     fun findAll(): List<Word?>?
 
-    fun insertWord(w: Word)
+    fun insertWord(word: Word)
 }

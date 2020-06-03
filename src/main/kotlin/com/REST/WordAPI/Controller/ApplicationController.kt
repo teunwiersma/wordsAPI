@@ -22,7 +22,7 @@ class ApplicationController {
     }
 
     @PostMapping(value = ["/createWord"])
-    fun createEmployee(@RequestBody w: Word) {
-        wordService?.insertWord(w)
+    fun createEmployee(@RequestBody word: Word) {
+        wordService?.insertWord(word)
     }
 }
