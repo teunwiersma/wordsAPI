@@ -2,8 +2,10 @@ package com.REST.WordAPI.Service
 
 import com.REST.WordAPI.DAO.WordDao
 import com.REST.WordAPI.Model.Word
+import org.springframework.stereotype.Component
 import javax.annotation.Resource
 
+@Component
 class WordServiceImpl : WordService {
 
     @Resource
