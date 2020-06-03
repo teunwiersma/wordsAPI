@@ -29,12 +29,11 @@ class WordDaoImpl : WordDao {
         return template?.query("select * from word", rowMapper)
     }
 
-    override fun insertWord(w: Word?) {
+    override fun insertWord(w: Word) {
         val sql = "insert into word(word) values(:w)"
         val holder: KeyHolder = GeneratedKeyHolder()
-        val param: SqlParameterSource = MapSqlParameterSource().addValue("w", w?.getWord())
+        val param: SqlParameterSource = MapSqlParameterSource().addValue("w", w)
         template?.update(sql, param, holder)
     }
-
 
 }

@@ -4,5 +4,5 @@ import com.REST.WordAPI.Model.Word
 
 interface WordDao {
     fun findAll(): List<Word?>?
-    fun insertWord(w: Word?)
+    fun insertWord(w: Word)
 }
