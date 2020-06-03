@@ -18,9 +18,6 @@ class ApplicationController {
     @GetMapping(value = ["/words"])
     fun getWords(): List<Word?>? {
         var words = wordService?.findAll()
-        if(words == null){
-            return words
-        }
         return words;
 
     }
