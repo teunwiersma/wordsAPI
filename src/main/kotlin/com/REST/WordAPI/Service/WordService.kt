@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service
 
 @Service
 interface WordService {
+
     fun findAll(): List<Word?>?
 
     fun insertWord(emp: Word?)
