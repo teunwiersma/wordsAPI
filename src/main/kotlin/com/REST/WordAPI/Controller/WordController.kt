@@ -10,11 +10,10 @@ import javax.annotation.Resource
 
 @RestController
 @RequestMapping("/WordAPI")
-class ApplicationController {
+class WordController {
 
     @Resource
     var wordService: WordService? = null
-    var userService: UserService? = null
 
     @GetMapping(value = ["/words"])
     fun getWords(): List<Word?>? {
@@ -22,20 +21,8 @@ class ApplicationController {
 
     }
 
-    @GetMapping(value = ["/users"])
-    fun getUsers(): List<User?>? {
-        return userService?.findAll();
-
-    }
-
     @PostMapping(value = ["/createWord"])
     fun createEmployee(@RequestBody word: Word) {
         wordService?.insertWord(word)
     }
-
-    @PostMapping(value = ["/createUser"])
-    fun createUser(@RequestBody user: User){
-        userService?.insertUser(user)
-    }
-
 }
