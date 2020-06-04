@@ -10,6 +10,6 @@ class UserMapper: RowMapper<Word> {
 
     @Throws(SQLException::class)
     override fun mapRow(rs: ResultSet, arg1: Int): User? {
-        return User(id = rs.getInt("userid"), username = rs.getString("username"), password = rs.getString("password"), highscore = rs.getInt("highscore"))
+        return User(userid = rs.getInt("userid"), username = rs.getString("username"), password = rs.getString("password"), highscore = rs.getInt("highscore"))
     }
 }
