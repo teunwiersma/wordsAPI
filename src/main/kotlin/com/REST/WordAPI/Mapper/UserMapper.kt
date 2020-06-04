@@ -6,7 +6,7 @@ import org.springframework.jdbc.core.RowMapper
 import java.sql.ResultSet
 import java.sql.SQLException
 
-class UserMapper: RowMapper<Word> {
+class UserMapper: RowMapper<User> {
 
     @Throws(SQLException::class)
     override fun mapRow(rs: ResultSet, arg1: Int): User? {
