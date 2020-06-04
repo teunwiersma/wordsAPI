@@ -7,5 +7,5 @@ import org.springframework.stereotype.Service
 interface UserService {
     fun findAll(): List<User?>?
 
-    fun insertUser(User: User)
+    fun insertUser(user: User)
 }

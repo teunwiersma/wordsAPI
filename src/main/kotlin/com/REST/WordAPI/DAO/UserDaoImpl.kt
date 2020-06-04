@@ -31,7 +31,7 @@ class UserDaoImpl : UserDao {
     }
 
     override fun insertUser(user: User) {
-        val sql = "insert into users (username, password, highscore) values(:username, password, highscore)"
+        val sql = "insert into users (username, password, highscore) values(:username, :password, :highscore)"
         val holder: KeyHolder = GeneratedKeyHolder()
         val param: SqlParameterSource = MapSqlParameterSource().addValue("username", user.getUserName())
                 .addValue("password", user.getPassword())

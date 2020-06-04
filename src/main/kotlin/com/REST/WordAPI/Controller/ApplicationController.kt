@@ -18,15 +18,13 @@ class ApplicationController {
 
     @GetMapping(value = ["/words"])
     fun getWords(): List<Word?>? {
-        var words = wordService?.findAll()
-        return words;
+        return wordService?.findAll();
 
     }
 
     @GetMapping(value = ["/users"])
     fun getUsers(): List<User?>? {
-        var users = userService?.findAll()
-        return users;
+        return userService?.findAll();
 
     }
 
@@ -36,8 +34,8 @@ class ApplicationController {
     }
 
     @PostMapping(value = ["/createUser"])
-        fun createUser(@RequestBody user: User){
-            userService?.insertUser(user)
+    fun createUser(@RequestBody user: User){
+        userService?.insertUser(user)
     }
 
 }
