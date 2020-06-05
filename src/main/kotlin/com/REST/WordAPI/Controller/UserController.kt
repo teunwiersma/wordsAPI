@@ -18,8 +18,15 @@ class UserController {
         return userService?.findAll();
     }
 
+    @GetMapping(value = ["/login"])
+    fun login(@RequestBody username: String, password: String): User?{
+        return userService?.login(username, password)
+    }
+
     @PostMapping(value = ["/createUser"])
     fun createUser(@RequestBody user: User){
         userService?.insertUser(user)
     }
+
+
 }

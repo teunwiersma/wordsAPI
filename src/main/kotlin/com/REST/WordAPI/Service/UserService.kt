@@ -8,4 +8,6 @@ interface UserService {
     fun findAll(): List<User?>?
 
     fun insertUser(user: User)
+
+    fun login(username:String, password: String): User?
 }

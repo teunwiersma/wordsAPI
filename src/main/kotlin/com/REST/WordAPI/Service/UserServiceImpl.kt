@@ -20,4 +20,8 @@ class UserServiceImpl : UserService{
     override fun insertUser(user: User) {
         userDao?.insertUser(user)
     }
+
+    override fun login(username: String, password: String): User? {
+        return userDao?.login(username, password)
+    }
 }
