@@ -40,7 +40,7 @@ class UserDaoImpl : UserDao {
     }
 
     override fun login(username:String, password:String): User? {
-        val sql = "select * from users where username=':username' and password=':password'"
+        val sql = "select * from users where username=:username and password=:password"
         val param: SqlParameterSource = MapSqlParameterSource().addValue("username", username)
                 .addValue("password", password)
         return template?.queryForObject(sql, param ,rowMapper)
