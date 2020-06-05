@@ -21,7 +21,7 @@ class UserServiceImpl : UserService{
         userDao?.insertUser(user)
     }
 
-    override fun login(username: String, password: String): User? {
+    override fun login(username: String, password: String): MutableList<User>? {
         return userDao?.login(username, password)
     }
 }

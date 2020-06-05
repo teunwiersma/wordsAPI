@@ -19,7 +19,7 @@ class UserController {
     }
 
     @GetMapping(value = ["/login"])
-    fun login(@RequestBody username: String, password: String): User?{
+    fun login(@RequestBody username: String, password: String):MutableList<User>?{
         return userService?.login(username, password)
     }
 

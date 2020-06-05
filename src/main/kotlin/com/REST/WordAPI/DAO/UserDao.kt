@@ -5,5 +5,5 @@ import com.REST.WordAPI.Model.User
 interface UserDao {
     fun findAll(): List<User?>?
     fun insertUser(user: User)
-    fun login(username:String, password:String): User?
+    fun login(username:String, password:String): MutableList<User>?
 }
