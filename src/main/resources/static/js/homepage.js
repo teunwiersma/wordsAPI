@@ -38,8 +38,6 @@ function gameloop(){
         firstletter.firstElementChild.innerHTML=word[0];
     });
 
-    window.onload = function(){
-        console.log(document.getElementById("gok").innerHTML)
 
     document.getElementById("gok").onkeypress = function submitGok(event) {
         if (event.key === "Enter") {
@@ -148,7 +146,6 @@ function gameloop(){
             beurtNummer++;
         }
     }
-    };
 }
 
 var end = function(msg, tip){
