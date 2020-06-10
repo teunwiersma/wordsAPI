@@ -1,5 +1,5 @@
 var gok;
-var wordList = [];
+const wordList = [];
 
 var changeClass = function(c, oud, nieuw){
     c.className = c.className.replace(oud, nieuw);
@@ -18,8 +18,8 @@ getWords();
 
 function gameloop(){
     console.log(wordList)
-    var word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
-    var hasDuplicates = (/([a-zA-Z]).*?\1/).test(word);
+    const word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+    const hasDuplicates = (/([a-zA-Z]).*?\1/).test(word);
     console.log(word)
 
     var beurtNummer = 1;
