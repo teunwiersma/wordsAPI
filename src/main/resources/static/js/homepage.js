@@ -153,13 +153,13 @@ var playagain = function(){
 const getWords = async () => {
     const response = await fetch('https://nameless-stream-41681.herokuapp.com/WordAPI/words');
     const myJson = await response.json();
-    console.log(myJson)
-    var wordList = []
-    var data = JSON.parse(myJson)
+    console.log(myJson);
+    var wordList = [];
+    var data = JSON.parse(myJson);
     data.forEach(word =>{
-        wordList.push(word)
+        wordList.push(word.word);
     })
-    return wordList
+    return wordList;
 }
 
 gameloop();
