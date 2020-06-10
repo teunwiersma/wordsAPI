@@ -14,6 +14,7 @@ const getWords = async () => {
     myJson.forEach(word =>{
         wordList.push(word.word);
     })
+    gameloop();
     return wordList;
 }
 getWords();
@@ -164,4 +165,3 @@ var playagain = function(){
     location.reload();
 };
 
-gameloop();
