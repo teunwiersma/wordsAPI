@@ -7,7 +7,7 @@ var changeClass = function(c, oud, nieuw){
 
 const getWords = function() {
     const response = fetch('https://nameless-stream-41681.herokuapp.com/WordAPI/words');
-    const myJson =  response.parse();
+    const myJson =  JSON.parse(response);
 
     for (var x = 0; x < myJson.length; x++) {
         wordList.push(myJson[x].word);
