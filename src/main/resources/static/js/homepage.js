@@ -5,21 +5,19 @@ var changeClass = function(c, oud, nieuw){
     c.className = c.className.replace(oud, nieuw);
 }
 
-const getWords = function() {
-    const response = fetch('https://nameless-stream-41681.herokuapp.com/WordAPI/words');
-    console.log(response);
-    const myJson =  JSON.parse(response);
+const getWords = async () => {
+    const response = await fetch('https://nameless-stream-41681.herokuapp.com/WordAPI/words');
+    const myJson = await response.json();
 
-    for (var x = 0; x < myJson.length; x++) {
-        wordList.push(myJson[x].word);
-    }
+    myJson.forEach(word =>{
+        wordList.push(word.word);
+    })
+    return wordList;
 }
 getWords();
 
 function gameloop(){
     console.log(wordList)
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    console.log(months)
     const word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
     const hasDuplicates = (/([a-zA-Z]).*?\1/).test(word);
     console.log(word)
