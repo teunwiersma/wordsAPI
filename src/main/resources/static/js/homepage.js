@@ -47,6 +47,16 @@ function gameloop(){
                     }
                     beurtNummer++;
                     document.getElementById(current).firstElementChild.innerHTML=word[0];
+                    document.getElementById("row1-6").style.visibility = "hidden";
+                    document.getElementById("row1-7").style.visibility = "hidden";
+                    document.getElementById("row2-6").style.visibility = "hidden";
+                    document.getElementById("row2-7").style.visibility = "hidden";
+                    document.getElementById("row3-6").style.visibility = "hidden";
+                    document.getElementById("row3-7").style.visibility = "hidden";
+                    document.getElementById("row4-6").style.visibility = "hidden";
+                    document.getElementById("row4-7").style.visibility = "hidden";
+                    document.getElementById("row5-6").style.visibility = "hidden";
+                    document.getElementById("row5-7").style.visibility = "hidden";
                     return;
                 }
             }
@@ -59,6 +69,12 @@ function gameloop(){
                     }
                     beurtNummer++;
                     document.getElementById(current).firstElementChild.innerHTML=word[0];
+                    document.getElementById("row1-7").style.visibility = "hidden";
+                    document.getElementById("row2-7").style.visibility = "hidden";
+                    document.getElementById("row3-7").style.visibility = "hidden";
+                    document.getElementById("row4-7").style.visibility = "hidden";
+                    document.getElementById("row5-7").style.visibility = "hidden";
+
                     return;
                 }
             }
