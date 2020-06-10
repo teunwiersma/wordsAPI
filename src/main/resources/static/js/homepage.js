@@ -150,8 +150,8 @@ function gameloop(){
 
 var end = function(titel, tip){
     document.getElementById('titel').innerHTML = titel;
-    document.getElementById('tip').innerHTML = tip;
-    changeClass(document.getElementById('button').button, "invisible", "visible");
+    document.getElementById('tip').innerHTML = "";
+    changeClass(document.getElementById('button'), "invisible", "visible");
     document.getElementById('gok').readOnly = true;
 }
 
