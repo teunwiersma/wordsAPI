@@ -12,7 +12,7 @@ const getWords = async () => {
     JSON.stringify(myJson);
     console.log(myJson);
     myJson.forEach(word =>{
-        wordList.push(word.word.str);
+        wordList.push(word.word);
     })
     return wordList;
 }
