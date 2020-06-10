@@ -10,7 +10,7 @@ const getWords = async () => {
     const myJson = await response.json();
 
     myJson.forEach(word =>{
-        wordList.push(word);
+        wordList.push(word.word.toString());
     })
     return wordList;
 }
