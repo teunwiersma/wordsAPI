@@ -121,8 +121,8 @@ function gameloop(){
 
 
             for(var x=0; x<childDivs.length; x++) {
-                if(word.indexOf(gok[x])!==-1){
-                    if(hasDuplicates === false && childDivs[word.indexOf(gok[x])].className !== "square correct"){
+                if(word.indexOf(gok[x])!=-1){
+                    if(hasDuplicates === false && childDivs[word.indexOf(gok[x])].className != "square correct"){
                         changeClass(childDivs[x], 'default', 'fout');
                     }
 
@@ -130,12 +130,12 @@ function gameloop(){
                         var ind = getAllIndexes(word, gok[x]);
                         if (ind.length > 1){
                             for (var y=0; y<ind.length; y++){
-                                if(childDivs[ind[y]].className !== "square correct" && childDivs[y].className !== "square fout"){
+                                if(childDivs[ind[y]].className != "square correct" && childDivs[y].className != "square fout"){
                                     changeClass(childDivs[x], 'default', 'fout');
                                 }
                             }
                         }
-                        else if (childDivs[word.indexOf(gok[x])].className !== "square correct"){
+                        else if (childDivs[word.indexOf(gok[x])].className != "square correct"){
                             changeClass(childDivs[x], 'default', 'fout');
                         }
                     }
