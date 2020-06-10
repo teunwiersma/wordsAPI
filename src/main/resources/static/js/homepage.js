@@ -156,7 +156,7 @@ const getWords = async () => {
     const myJson = await response.json();
 
     myJson.forEach(word =>{
-        wordList.push(word.word);
+        wordList.push(word);
     })
     return wordList;
 }
