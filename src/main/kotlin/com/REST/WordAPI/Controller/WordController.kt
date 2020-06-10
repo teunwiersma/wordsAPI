@@ -1,8 +1,6 @@
 package com.REST.WordAPI.Controller
 
-import com.REST.WordAPI.Model.User
-import com.REST.WordAPI.Model.Word
-import com.REST.WordAPI.Service.UserService
+import com.REST.WordAPI.Domain.Word
 import com.REST.WordAPI.Service.WordService
 import org.springframework.web.bind.annotation.*
 import javax.annotation.Resource

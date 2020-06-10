@@ -1,7 +1,7 @@
 package com.REST.WordAPI.Service
 
 import com.REST.WordAPI.DAO.WordDao
-import com.REST.WordAPI.Model.Word
+import com.REST.WordAPI.Domain.Word
 import org.springframework.stereotype.Component
 import javax.annotation.Resource
 

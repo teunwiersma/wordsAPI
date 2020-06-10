@@ -1,6 +1,5 @@
 package com.REST.WordAPI.DAO
-import com.REST.WordAPI.Model.User
-import com.REST.WordAPI.Model.Word
+import com.REST.WordAPI.Domain.User
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.jdbc.core.RowMapper
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource

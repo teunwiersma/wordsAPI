@@ -1,6 +1,6 @@
 package com.REST.WordAPI.DAO
 
-import com.REST.WordAPI.Model.Word
+import com.REST.WordAPI.Domain.Word
 
 interface WordDao {
     fun findAll(): List<Word?>?

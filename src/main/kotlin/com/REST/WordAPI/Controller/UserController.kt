@@ -1,6 +1,6 @@
 package com.REST.WordAPI.Controller
 
-import com.REST.WordAPI.Model.User
+import com.REST.WordAPI.Domain.User
 import com.REST.WordAPI.Service.UserService
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*

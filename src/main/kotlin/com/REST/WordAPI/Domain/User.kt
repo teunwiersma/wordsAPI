@@ -1,4 +1,4 @@
-package com.REST.WordAPI.Model
+package com.REST.WordAPI.Domain
 
 class User (private var userid: Int, private var username: String, private var password: String, private var highscore: Int){
 

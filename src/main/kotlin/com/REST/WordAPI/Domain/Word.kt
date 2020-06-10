@@ -1,4 +1,4 @@
-package com.REST.WordAPI.Model
+package com.REST.WordAPI.Domain
 
 class Word (private var id: Int, private var word: String){
 

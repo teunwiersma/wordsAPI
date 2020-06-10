@@ -1,7 +1,6 @@
 package com.REST.WordAPI.Mapper
 
-import com.REST.WordAPI.Model.User
-import com.REST.WordAPI.Model.Word
+import com.REST.WordAPI.Domain.User
 import org.springframework.jdbc.core.RowMapper
 import java.sql.ResultSet
 import java.sql.SQLException
