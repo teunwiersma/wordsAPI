@@ -8,9 +8,11 @@ var changeClass = function(c, oud, nieuw){
 const getWords = async () => {
     const response = await fetch('https://nameless-stream-41681.herokuapp.com/WordAPI/words');
     const myJson = await response.json();
-
+    console.log(myJson);
+    JSON.stringify(myJson);
+    console.log(myJson);
     myJson.forEach(word =>{
-        wordList.push(word.word.toString());
+        wordList.push(word.word.str);
     })
     return wordList;
 }
