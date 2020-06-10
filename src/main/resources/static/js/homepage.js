@@ -110,6 +110,7 @@ function gameloop(){
                 if(gok[x] === word[x]){
                     changeClass(childDivs[x], 'default', 'correct');
                     c++;
+                    console.log(c)
                 }
 
                 document.getElementById("gok").value = "";
