@@ -24,7 +24,7 @@ function gameloop(){
 
     var beurtNummer = 1;
 
-    if( word.length !== 5){
+    if( word.length === 5){
         document.getElementById("row1-6").style.visibility = "hidden";
         document.getElementById("row1-7").style.visibility = "hidden";
         document.getElementById("row2-6").style.visibility = "hidden";
@@ -38,7 +38,6 @@ function gameloop(){
     }
 
     if(word.length === 6){
-        document.getElementById(current).firstElementChild.innerHTML=word[0];
         document.getElementById("row1-7").style.visibility = "hidden";
         document.getElementById("row2-7").style.visibility = "hidden";
         document.getElementById("row3-7").style.visibility = "hidden";
