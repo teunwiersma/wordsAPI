@@ -162,4 +162,10 @@ var playagain = function(){
     location.reload();
 };
 
-gameloop();
+
+async function startGameLoop(){
+    const r = await getWords();
+    gameloop();
+}
+
+startGameLoop();
