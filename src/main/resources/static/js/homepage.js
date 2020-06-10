@@ -104,6 +104,8 @@ function gameloop(){
                 childDivs[x].innerHTML = gok[x];
 
                 if(gok[x] === word[x]){
+                    console.log(gok[x])
+                    console.log(word[x])
                     changeClass(childDivs[x], 'default', 'correct');
                     c++;
                     console.log(c)
