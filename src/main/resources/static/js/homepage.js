@@ -7,7 +7,7 @@ var changeClass = function(c, oud, nieuw){
 
 function gameloop(){
     console.log(wordList)
-    var word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+    var word = wordList[Math.floor(Math.random() * wordList.length)];
     var hasDuplicates = (/([a-zA-Z]).*?\1/).test(word);
     console.log(word)
 
@@ -156,7 +156,7 @@ const getWords = async () => {
     const myJson = await response.json();
 
     myJson.forEach(word =>{
-        wordList.push(word);
+        wordList.push(word.word);
     })
     return wordList;
 }
