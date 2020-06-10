@@ -113,8 +113,8 @@ function gameloop(){
                 }
 
                 document.getElementById("gok").value = "";
-
-                if(c===5) {
+                const wordLength = word.length
+                if(c===wordLength) {
                     end("Gewonnen!!", "Play Again?");
                 }
                 else if (beurtNummer === 5){
