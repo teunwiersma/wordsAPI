@@ -155,8 +155,7 @@ const getWords = async () => {
     const myJson = await response.json();
     console.log(myJson);
     var wordList = [];
-    var data = JSON.parse(myJson);
-    data.forEach(word =>{
+    myJson.forEach(word =>{
         wordList.push(word.word);
     })
     return wordList;
