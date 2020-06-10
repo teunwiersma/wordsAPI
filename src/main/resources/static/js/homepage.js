@@ -158,6 +158,7 @@ const getWords = async () => {
     myJson.forEach(word =>{
         wordList.push(word.word);
     })
+    console.log(wordList)
     return wordList;
 }
 
