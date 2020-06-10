@@ -5,7 +5,7 @@ var changeClass = function(c, oud, nieuw){
     c.className = c.className.replace(oud, nieuw);
 }
 
-const getWords = async () => {
+async function getWords(){
     const response = await fetch('https://nameless-stream-41681.herokuapp.com/WordAPI/words');
     const myJson = await response.json();
     console.log(myJson);
@@ -15,7 +15,6 @@ const getWords = async () => {
         wordList.push(word.word);
     })
 }
-getWords();
 
 function gameloop(){
     console.log(wordList)
