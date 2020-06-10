@@ -5,9 +5,20 @@ var changeClass = function(c, oud, nieuw){
     c.className = c.className.replace(oud, nieuw);
 }
 
+const getWords = async () => {
+    const response = await fetch('https://nameless-stream-41681.herokuapp.com/WordAPI/words');
+    const myJson = await response.json();
+
+    myJson.forEach(word =>{
+        wordList.push(word.word);
+    })
+    return wordList;
+}
+getWords();
+
 function gameloop(){
     console.log(wordList)
-    var word = wordList[Math.floor(Math.random() * wordList.length)];
+    var word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
     var hasDuplicates = (/([a-zA-Z]).*?\1/).test(word);
     console.log(word)
 
@@ -151,14 +162,4 @@ var playagain = function(){
     location.reload();
 };
 
-const getWords = async () => {
-    const response = await fetch('https://nameless-stream-41681.herokuapp.com/WordAPI/words');
-    const myJson = await response.json();
-
-    myJson.forEach(word =>{
-        wordList.push(word.word);
-    })
-    return wordList;
-}
-getWords();
 gameloop();
