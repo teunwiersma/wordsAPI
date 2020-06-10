@@ -10,6 +10,6 @@ class WordMapper : RowMapper<Word> {
 
     @Throws(SQLException::class)
     override fun mapRow(rs: ResultSet, arg1: Int): Word? {
-        return Word(id = rs.getInt("id"), word = rs.getString("word"))
+        return Word( word = rs.getString("word"))
     }
 }
