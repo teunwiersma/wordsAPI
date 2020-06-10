@@ -17,7 +17,6 @@ const getWords = async () => {
     gameloop();
     return wordList;
 }
-getWords();
 
 function gameloop(){
     console.log(wordList)
@@ -165,3 +164,4 @@ var playagain = function(){
     location.reload();
 };
 
+getWords();
