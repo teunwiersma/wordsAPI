@@ -24,6 +24,28 @@ function gameloop(){
 
     var beurtNummer = 1;
 
+    if( word.length !== 5){
+        document.getElementById("row1-6").style.visibility = "hidden";
+        document.getElementById("row1-7").style.visibility = "hidden";
+        document.getElementById("row2-6").style.visibility = "hidden";
+        document.getElementById("row2-7").style.visibility = "hidden";
+        document.getElementById("row3-6").style.visibility = "hidden";
+        document.getElementById("row3-7").style.visibility = "hidden";
+        document.getElementById("row4-6").style.visibility = "hidden";
+        document.getElementById("row4-7").style.visibility = "hidden";
+        document.getElementById("row5-6").style.visibility = "hidden";
+        document.getElementById("row5-7").style.visibility = "hidden";
+    }
+
+    if(word.length === 6){
+        document.getElementById(current).firstElementChild.innerHTML=word[0];
+        document.getElementById("row1-7").style.visibility = "hidden";
+        document.getElementById("row2-7").style.visibility = "hidden";
+        document.getElementById("row3-7").style.visibility = "hidden";
+        document.getElementById("row4-7").style.visibility = "hidden";
+        document.getElementById("row5-7").style.visibility = "hidden";
+
+    }
 
     var getAllIndexes = function(arr, val) {
         var indexes = [], i;
@@ -49,28 +71,7 @@ function gameloop(){
             var childDivs = document.getElementById(current).getElementsByTagName('div');
             var c = 0;
 
-            if( word.length !== 5){
-                document.getElementById("row1-6").style.visibility = "hidden";
-                document.getElementById("row1-7").style.visibility = "hidden";
-                document.getElementById("row2-6").style.visibility = "hidden";
-                document.getElementById("row2-7").style.visibility = "hidden";
-                document.getElementById("row3-6").style.visibility = "hidden";
-                document.getElementById("row3-7").style.visibility = "hidden";
-                document.getElementById("row4-6").style.visibility = "hidden";
-                document.getElementById("row4-7").style.visibility = "hidden";
-                document.getElementById("row5-6").style.visibility = "hidden";
-                document.getElementById("row5-7").style.visibility = "hidden";
-            }
 
-            if(word.length === 6){
-                document.getElementById(current).firstElementChild.innerHTML=word[0];
-                document.getElementById("row1-7").style.visibility = "hidden";
-                document.getElementById("row2-7").style.visibility = "hidden";
-                document.getElementById("row3-7").style.visibility = "hidden";
-                document.getElementById("row4-7").style.visibility = "hidden";
-                document.getElementById("row5-7").style.visibility = "hidden";
-
-            }
 
             if(word.length === 5 && gok.length !== 5 ){
                 document.getElementById('tip').innerHTML = "Het wordt moet 5 letters hebben!";
@@ -150,7 +151,7 @@ function gameloop(){
     }
 }
 
-var end = function(msg, tip){
+var end = function(titel, tip){
     document.getElementById('titel').innerHTML = titel;
     document.getElementById('tip').innerHTML = tip;
     changeClass(document.getElementById('button').button, "invisible", "visible");
