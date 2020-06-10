@@ -8,20 +8,17 @@ var changeClass = function(c, oud, nieuw){
 async function getWords(){
     const response = await fetch('https://nameless-stream-41681.herokuapp.com/WordAPI/words');
     const myJson = await response.json();
-    console.log(myJson);
     JSON.stringify(myJson);
-    console.log(myJson);
     myJson.forEach(word =>{
         wordList.push(word.word);
     })
 }
 
 function gameloop(){
-    console.log(wordList)
     const word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
     const hasDuplicates = (/([a-zA-Z]).*?\1/).test(word);
     console.log(word)
-
+    const wordLength = word.length
     var beurtNummer = 1;
 
     if( word.length === 5){
@@ -114,7 +111,7 @@ function gameloop(){
                 }
 
                 document.getElementById("gok").value = "";
-                const wordLength = word.length
+
                 if(c===wordLength) {
                     end("Gewonnen!!", "Play Again?");
                 }
