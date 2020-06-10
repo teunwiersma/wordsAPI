@@ -9,9 +9,9 @@ const getWords = async () => {
     const response = await fetch('https://nameless-stream-41681.herokuapp.com/WordAPI/words');
     const myJson = await response.json();
 
-    myJson.forEach(word =>{
-        wordList.push(word.word);
-    })
+    for (var x = 0; x < myJson.length; x++) {
+        wordList.push(myJson[x].word);
+    }
     return wordList;
 }
 getWords();
