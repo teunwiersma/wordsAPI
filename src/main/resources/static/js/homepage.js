@@ -51,10 +51,9 @@ function gameloop(){
         return indexes;
     }
 
-    document.addEventListener("DOMContentLoaded", function(event) {
+
         var firstletter = document.getElementById("row1")
         firstletter.firstElementChild.innerHTML=word[0];
-    });
 
 
     document.getElementById("gok").onkeypress = function submitGok(event) {
