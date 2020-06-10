@@ -18,6 +18,8 @@ getWords();
 
 function gameloop(){
     console.log(wordList)
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    console.log(months)
     const word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
     const hasDuplicates = (/([a-zA-Z]).*?\1/).test(word);
     console.log(word)
