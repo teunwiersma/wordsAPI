@@ -164,4 +164,5 @@ var playagain = function(){
     location.reload();
 };
 
-getWords().then(r => gameloop());
+getWords();
+gameloop();
