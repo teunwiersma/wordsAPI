@@ -27,7 +27,7 @@ button:hover {
     color: white;
 }
 
-#msgBox {
+#titel {
     text-align: center;
     font-size: 3.5em;
     font-family: 'Arial', sans-serif;
@@ -40,13 +40,13 @@ button:hover {
     }
 }
 
-#smallMsg {
+#tip {
     text-align: center;
     padding: 0px 0px 10px 0px;
     font-size: 1.1em;
 }
 
-#guess {
+#gok {
     border: 1px black solid;
     padding: 5px;
     margin: 10px auto;
@@ -63,7 +63,7 @@ button:hover {
     background: green;
 }
 
-.wrongplace {
+.fout {
     background: yellow;
 }
 
