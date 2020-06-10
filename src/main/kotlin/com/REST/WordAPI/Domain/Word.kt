@@ -1,15 +1,7 @@
 package com.REST.WordAPI.Domain
 
-class Word (private var id: Int, private var word: String){
+class Word (private var word: String){
 
-
-    fun getId(): Int? {
-        return id
-    }
-
-    fun setId(id: Int){
-        this.id = id
-    }
 
     fun setWord(word: String) {
         this.word = word

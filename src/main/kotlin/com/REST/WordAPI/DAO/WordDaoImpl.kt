@@ -23,7 +23,7 @@ class WordDaoImpl : WordDao {
     }
 
     var rowMapper: RowMapper<Word> = RowMapper<Word> { resultSet: ResultSet, rowIndex: Int ->
-        Word(resultSet.getInt("id"), resultSet.getString("word") )}
+        Word(resultSet.getString("word") )}
 
     override fun findAll(): List<Word?>? {
         return template?.query("select * from word", rowMapper)
