@@ -111,6 +111,8 @@ function gameloop(){
                     console.log(c)
                 }
 
+                const nextLetter = "row" + beurtNummer;
+                document.getElementById(nextLetter).firstElementChild.innerHTML=word[0];
                 document.getElementById("gok").value = "";
 
                 if(c===wordLength) {
