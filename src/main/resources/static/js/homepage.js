@@ -145,7 +145,8 @@ function gameloop(){
             }
 
             beurtNummer++;
-            document.getElementById(current).firstElementChild.innerHTML=word[0];
+            const nextLetter = "row" + (beurtNummer + 1);
+            document.getElementById(nextLetter).firstElementChild.innerHTML=word[0];
         }
     }
 }
