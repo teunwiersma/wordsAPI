@@ -80,7 +80,7 @@ function gameloop(){
             }
 
             if(word.length === 7 && gok.length !== 7){
-                    document.getElementById('tip').innerHTML = "Het wordt moet 5 letters hebben!";
+                    document.getElementById('tip').innerHTML = "Het wordt moet 7 letters hebben!";
                     if(beurtNummer===5){
                         end("Verloren!.", "Correcte word: " + word);
                     }
@@ -91,7 +91,7 @@ function gameloop(){
             }
 
             if(word.length === 6 && gok.length !== 6){
-                document.getElementById('tip').innerHTML = "Het wordt moet 5 letters hebben!";
+                document.getElementById('tip').innerHTML = "Het wordt moet 6 letters hebben!";
                 if(beurtNummer===5){
                     end("Verloren!.", "Correcte word: " + word);
                 }
@@ -145,6 +145,7 @@ function gameloop(){
             }
 
             beurtNummer++;
+            document.getElementById(current).firstElementChild.innerHTML=word[0];
         }
     }
 }
