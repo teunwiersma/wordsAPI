@@ -18,10 +18,6 @@ class WordDaoImpl : WordDao {
     @Autowired
     private var template: NamedParameterJdbcTemplate? = null
 
-    fun WordDaoImpl(template: NamedParameterJdbcTemplate?) {
-        this.template = template
-    }
-
     var rowMapper: RowMapper<Word> = RowMapper<Word> { resultSet: ResultSet, rowIndex: Int ->
         Word(resultSet.getString("word") )}
 

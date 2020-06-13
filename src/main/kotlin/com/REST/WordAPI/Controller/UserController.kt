@@ -19,16 +19,10 @@ class UserController {
         return userService?.findAll();
     }
 
-    @GetMapping("/login/{username}/{password}")
-    @ResponseStatus(HttpStatus.OK)
-    fun login(@PathVariable("username") username: String,
-              @PathVariable("password") password: String):MutableList<User>?{
-        return userService?.login(username, password)
-    }
-
     @PostMapping("/createUser")
-    fun createUser(@RequestBody user: User){
+    fun createUser(@RequestBody user: User): HttpStatus {
         userService?.insertUser(user)
+        return HttpStatus.OK
     }
 
 

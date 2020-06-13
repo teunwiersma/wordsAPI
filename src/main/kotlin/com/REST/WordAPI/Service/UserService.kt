@@ -9,5 +9,4 @@ interface UserService {
 
     fun insertUser(user: User)
 
-    fun login(username:String, password: String): MutableList<User>?
 }

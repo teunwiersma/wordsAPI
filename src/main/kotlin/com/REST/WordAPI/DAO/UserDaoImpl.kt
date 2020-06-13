@@ -17,10 +17,6 @@ class UserDaoImpl : UserDao {
     @Autowired
     private var template: NamedParameterJdbcTemplate? = null
 
-    fun UserDaoImpl(template: NamedParameterJdbcTemplate?) {
-        this.template = template
-    }
-
     var rowMapper: RowMapper<User> = RowMapper<User> { resultSet: ResultSet, rowIndex: Int ->
         User(resultSet.getInt("userid"), resultSet.getString("username"), resultSet.getString("password"), resultSet.getInt("highscore"))
     }
@@ -36,11 +32,6 @@ class UserDaoImpl : UserDao {
                 .addValue("password", user.getPassword())
                 .addValue("highscore", user.getHighscore())
         template!!.update(sql, param, holder)
-    }
-
-    override fun login(username:String, password:String): MutableList<User>? {
-        val sql = "select * from users where username='$username' and password='$password'"
-        return template?.query(sql , rowMapper)
     }
 }
 
