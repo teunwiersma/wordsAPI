@@ -1,5 +1,8 @@
 var gok;
 const wordList = [];
+var beurtNummer;
+var score;
+var name;
 
 var changeClass = function(c, oud, nieuw){
     c.className = c.className.replace(oud, nieuw);
@@ -19,7 +22,7 @@ function gameloop(){
     const hasDuplicates = (/([a-zA-Z]).*?\1/).test(word);
     console.log(word)
     const wordLength = word.length
-    var beurtNummer = 1;
+    beurtNummer = 1;
 
     if( word.length === 5){
         document.getElementById("row1-6").style.visibility = "hidden";
@@ -158,6 +161,28 @@ var end = function(titel, tip){
     document.getElementById('tip').innerHTML = "";
     changeClass(document.getElementById('button'), "invisible", "visible");
     document.getElementById('gok').readOnly = true;
+    saveHighScore()
+}
+
+function saveHighScore() {
+    var txt;
+    score = 50 - (beurtNummer * 10)
+    name = prompt("Voer je naam in:", "");
+    if (name == null || name === "") {
+        txt = "Highscore niet opgeslagen";
+    } else {
+        txt = "Highscore opgeslagen";
+    }
+    document.getElementById("saved").innerHTML = txt;
+    postHighScore()
+}
+
+function postHighScore(){
+    $.post("https://nameless-stream-41681.herokuapp.com/UserAPI/createUser",
+        {
+            username: name,
+            highscore: score
+        })
 }
 
 var playagain = function(){
