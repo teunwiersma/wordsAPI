@@ -209,7 +209,7 @@ async function loadHighScoreInTable() {
 
     for (var x = 0; x < users.length; x++) {
         tr = table.insertRow(-1);
-        for (var y = 0; y < col.length; y++) {
+        for (var y = 0; y < scores.length; y++) {
             var tabCell = tr.insertCell(-1);
             tabCell.innerHTML = users[x][scores[y]];
         }
