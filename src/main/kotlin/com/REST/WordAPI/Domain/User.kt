@@ -1,6 +1,6 @@
 package com.REST.WordAPI.Domain
 
-class User ( private var name: String, private var highscore: Int){
+class User constructor( private var name: String, private var highscore: Int){
 
 
     fun getUserName(): String? {
