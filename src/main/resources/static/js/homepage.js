@@ -180,8 +180,8 @@ function saveHighScore() {
 function postHighScore(){
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "https://nameless-stream-41681.herokuapp.com/UserAPI/createUser", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("username=" + name + "&highscore=" + score);
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send(JSON.stringify({username: name, highscore: score}));
 
 }
 
