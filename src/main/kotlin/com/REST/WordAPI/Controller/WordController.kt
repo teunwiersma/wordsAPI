@@ -22,4 +22,10 @@ class WordController {
     fun createWord(@RequestBody word: Word) {
         wordService?.insertWord(word)
     }
+
+    @PostMapping("/insertWord")
+    fun insertWord(@RequestParam  w: String) {
+        var word: Word = Word(w)
+        wordService?.insertWord(word)
+    }
 }
