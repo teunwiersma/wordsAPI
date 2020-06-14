@@ -19,6 +19,7 @@ async function getWords(){
 
 function gameloop(){
     const word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+    console.log(word);
     const hasDuplicates = (/([a-zA-Z]).*?\1/).test(word);
     const wordLength = word.length
     beurtNummer = 1;
