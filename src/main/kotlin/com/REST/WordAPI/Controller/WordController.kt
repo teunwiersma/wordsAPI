@@ -13,10 +13,9 @@ class WordController {
     @Resource
     var wordService: WordService? = null
 
-    @GetMapping(value = ["/words"])
+    @GetMapping("/words")
     fun getWords(): List<Word?>? {
         return wordService?.findAll();
-
     }
 
     @PostMapping("/createWord")
