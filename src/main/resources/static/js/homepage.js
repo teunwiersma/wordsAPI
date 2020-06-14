@@ -20,7 +20,6 @@ async function getWords(){
 function gameloop(){
     const word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
     const hasDuplicates = (/([a-zA-Z]).*?\1/).test(word);
-    console.log(word)
     const wordLength = word.length
     beurtNummer = 1;
 
@@ -107,11 +106,8 @@ function gameloop(){
                 childDivs[x].innerHTML = gok[x];
 
                 if(gok[x] == word[x]){
-                    console.log("gok: " + x + "---" +gok[x])
-                    console.log("word:" + x + "---" +word[x])
                     changeClass(childDivs[x], 'default', 'correct');
                     c++;
-                    console.log(c)
                 }
 
                 const nextLetter = "row" + beurtNummer;
