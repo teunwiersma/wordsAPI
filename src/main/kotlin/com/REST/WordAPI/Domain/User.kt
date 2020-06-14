@@ -1,14 +1,14 @@
 package com.REST.WordAPI.Domain
 
-class User ( private var username: String, private var highscore: Int){
+class User ( private var name: String, private var highscore: Int){
 
 
     fun getUserName(): String? {
-        return username
+        return name
     }
 
-    fun setUserName(username: String){
-        this.username = username
+    fun setUserName(name: String){
+        this.name = name
     }
 
     fun getHighscore(): Int? {
