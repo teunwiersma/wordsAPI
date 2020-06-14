@@ -20,7 +20,7 @@ class WordController {
     }
 
     @PostMapping(value = ["/createWord"])
-    fun creatWord(@RequestBody word: Word) {
+    fun createWord(@RequestBody word: Word) {
         wordService?.insertWord(word)
     }
 }
