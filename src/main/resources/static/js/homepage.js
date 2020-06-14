@@ -162,7 +162,7 @@ var end = function(titel, tip){
 
 function saveHighScore() {
     var txt;
-    score = 50 - (beurtNummer * 10)
+    score = 60 - (beurtNummer * 10)
     name = prompt("Voer je naam in:", "");
     if (name == null || name === "") {
         txt = "Highscore niet opgeslagen";
