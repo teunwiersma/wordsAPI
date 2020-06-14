@@ -22,7 +22,7 @@ class UserDaoImpl : UserDao {
     }
 
     override fun findAll(): List<User?>? {
-        return template?.query("select * from users", rowMapper)
+        return template?.query("select * from users limit 5", rowMapper)
     }
 
     override fun insertUser(user: User) {

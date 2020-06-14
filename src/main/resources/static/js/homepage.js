@@ -178,13 +178,47 @@ function saveHighScore() {
 }
 
 function postHighScore(){
-    $.post("https://nameless-stream-41681.herokuapp.com/UserAPI/createUser",
-        {
-            username: name,
-            highscore: score
-        })
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "https://nameless-stream-41681.herokuapp.com/UserAPI/createUser", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("username=" + name + "&highscore=" + score);
+
 }
 
+async function loadHighScoreInTable() {
+    const response = await fetch('https://nameless-stream-41681.herokuapp.com/UserAPI/Users');
+    const users = await response.json();
+
+    var scores = [];
+    for (var x = 0; x < users.length; x++) {
+        for (var key in users[x]) {
+            if (scores.indexOf(key) === -1) {
+                scores.push(key);
+            }
+        }
+    }
+
+    var table = document.createElement("table");
+    var tr = table.insertRow(-1);
+
+    for (var x = 0; x < scores.length; x++) {
+        var th = document.createElement("th");
+        th.innerHTML = scores[x];
+        tr.appendChild(th);
+    }
+
+    for (var x = 0; x < users.length; x++) {
+        tr = table.insertRow(-1);
+        for (var y = 0; y < col.length; y++) {
+            var tabCell = tr.insertCell(-1);
+            tabCell.innerHTML = users[x][scores[y]];
+        }
+    }
+    var divContainer = document.getElementById("highscores");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
+
+}
 var playagain = function(){
     location.reload();
 };
@@ -195,4 +229,5 @@ async function startGameLoop(){
     gameloop();
 }
 
+loadHighScoreInTable();
 startGameLoop();
