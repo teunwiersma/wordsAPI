@@ -186,7 +186,7 @@ function postHighScore(){
 }
 
 async function loadHighScoreInTable() {
-    const response = await fetch('https://nameless-stream-41681.herokuapp.com/UserAPI/Users');
+    const response = await fetch('https://nameless-stream-41681.herokuapp.com/UserAPI/users');
     const users = await response.json();
 
     var scores = [];
