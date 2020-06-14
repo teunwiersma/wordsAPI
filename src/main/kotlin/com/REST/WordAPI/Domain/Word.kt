@@ -5,8 +5,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize
 @JsonDeserialize
 class Word constructor(private var word: String){
 
-    fun Word(){
-
+    fun Word(word: String){
+        this.word = word
     }
     fun getWord(): String? {
         return word
